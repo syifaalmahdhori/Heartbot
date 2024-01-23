@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Heart Disease Detector</title>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				<img src={{ url_for('static', filename='/images/Heart.PNG') }} alt="Orbit Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Heart Disease Detector</a>
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Deskripsi Aplikasi -->
+				
+				<h2>Heart Disease Classifier</h2><br>
+				<p style="text-align: justify;text-justify: inter-word;">
+					Aplikasi ini dibuat untuk mengecek apakah seorang pasien memiliki penyakit jantung atau tidak berdasarkan pengukuran
+					dari <i>cp</i>, <i>trestbps</i>, <i>chol</i>, <i>restecg</i>, <i>thalach</i>, <i>exang</i>, <i>oldpeak</i>, <i>slope</i>, <i>ca</i>, <i>thal</i> pasien.  
+					Pasien dapat diidentifikasi memiliki penyakit jantung atau tidak melalui aplikasi ini.
+					Pengguna harus memberikan 13 nilai pengukuran untuk dapat mengidentifikasi adanya penyakit jantung atau tidak pada pasien.
+				</p>
+				<br>
+				<p style="text-align: justify;text-justify: inter-word;">
+					<i>Age</i> : Age in years,
+					<br>
+					<i>Sex</i> : 1=Male,0=Female, 
+					<br>
+					<i>Trestbps</i> : Resting blood pressure (in mm Hg), 
+					<br>
+					<i>Cp</i> : Chest pain type, 
+					<br>
+					<i>Chol</i> : Serum Cholesterol in mg/dl, 
+					<br>
+					<i>Fbs</i> : Fasting blood sugar> 120 mg/dl
+					<br>
+					<i>Restecg</i> : Resting Electrocardiography results, 
+					<br>
+					<i>Thalach</i> : Maximum heart rate achieved, 
+					<br>
+					<i>Exang</i> : Exang Exercise induced angina, 
+					<br>
+					<i>Oldpeak</i> : Depression induced by exercise relative to rest, 
+					<br>
+					<i>Slope</i>  : The slope of the peak exercise segment, 
+					<br>
+					<i>Ca</i> : Number of major vessels colour by fluoroscopy that ranges between 0 and 3, 
+					<br>
+					<i>Thal</i> : Hasil Stres Thalium.
+					
+				</p>
+				<br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#d46961">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div class="col-sm-6">
+				<br>
+				<br>
+				<br>
+				<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<img src={{ url_for('static', filename='/images/app-display.PNG') }} width="600" ></img>
+			</div>
+		</div>
+		<br>
+	</div>
+	
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				</br>
+				<!-- Input Nilai Pengukuran dari Pengguna -->
+				<h3 style="margin-left: 65px;">Nilai Pengukuran </h3>
+				<form>
+					<div class="form-group" style="margin-left: 65px;">
+						<!-- Input Slider untuk Nilai Pengukuran Identifikasi Penyakit Jantung -->
+						<label for="input_age">age </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_age">29-77<!-- Default value --></span><br>
+						<input type="number" min="29" max="77" name="age" class="slider" id="range_age"
+ 						style="width: 300px; height: 30px; background-color: rgb(249, 252, 253); color: rgb(3, 3, 3);" 
+						onInput="document.getElementById('rangeVal_age').innerHTML = this.value">
+						</br>
+						<label for="input_sex">Sex </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_age">1 = Pria, 0 = Wanita<!-- Default value --></span><br>
+						<select name="sex" id="range_sex" onInput="document.getElementById('rangeVal_sex').innerHTML = this.value" 
+						style= "width: 300px; color: rgb(3, 3, 3); height: 30px">
+							<option value= "0" >Pria</option>
+							<option value= "1" >Wanita</option>
+						</select>
+						</br>
+						<label for="input_cp">cp </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_cp">0/1/2/3<!-- Default value --></span><br>
+						<input type="radio" id="range_cp" name="cp" value="0" onInput="document.getElementById('rangeVal_cp').innerHTML = this.value">>
+  						<label for="rangeVal_cp">Typical angina</label><br>
+  						<input type="radio" id="range_cp" name="cp" value="1" onInput="document.getElementById('rangeVal_cp').innerHTML = this.value">>
+  						<label for="rangeVal_cp">Atypical angina</label><br>
+						  <input type="radio" id="range_cp" name="cp" value="2" onInput="document.getElementById('rangeVal_cp').innerHTML = this.value">>
+  						<label for="rangeVal_cp">Non-anginal pain</label><br>
+						  <input type="radio" id="range_cp" name="cp" value="3" onInput="document.getElementById('rangeVal_cp').innerHTML = this.value">>
+  						<label for="rangeVal_cp">Asymptomatic</label>
+						</br>
+						<label for="input_trestbps">trestbps </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_trestbps">94-200<!-- Default value --></span><br>
+						<input type="number" min="94" max="200" step="1" value="94" class="slider" id="range_trestbps" 
+						style="width: 300px; height: 30px; background-color: #ffffff; color: black ;"
+						onInput="document.getElementById('rangeVal_trestbps').innerHTML = this.value">
+						</br>
+						<label for="input_chol">chol </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_chol">126-564<!-- Default value --></span><br>
+						<input type="number" min="126" max="564" step="1" value="126" class="slider" id="range_chol" 
+						style="width: 300px; height: 30px; background-color: #ffffff; color: black ;"
+						onInput="document.getElementById('rangeVal_chol').innerHTML = this.value">
+						</br>
+						<label for="input_fbs">fbs </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_fbs">1 = Benar, 0 = Salah<!-- Default value --></span><br>
+						<select name="fbs" id="range_fbs" onInput="document.getElementById('rangeVal_fbs').innerHTML = this.value" 
+						style= "width: 300px; color: rgb(3, 3, 3); height: 30px">
+							<option value= "0" >Salah</option>
+							<option value= "1" >Benar</option>
+						</select>
+						</br>
+						<label for="input_restecg">restecg </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_restecg">0/1/2<!-- Default value --></span><br>
+						<input type="radio" id="range_restecg" name="ecg" value="0" onInput="document.getElementById('rangeVal_restecg').innerHTML = this.value">>
+  						<label for="rangeVal_restecg">Tidak ada yang perlu diperhatikan</label><br>
+  						<input type="radio" id="range_restecg" name="ecg" value="1" onInput="document.getElementById('rangeVal_restecg').innerHTML = this.value">>
+  						<label for="rangeVal_restecg">ST-T Wave abnormality</label><br>
+						<input type="radio" id="range_restecg" name="ecg" value="2" onInput="document.getElementById('rangeVal_restecg').innerHTML = this.value">>
+  						<label for="rangeVal_restecg">Possible or definite left ventricular hypertrophy</label>
+						</br>
+						<label for="input_thalach">thalach </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_thalach">71-202<!-- Default value --></span><br>
+						<input type="number" min="71" max="702" step="1" value="71" class="slider" id="range_thalach" 
+						style="width: 300px; height: 30px; background-color: #ffffff; color: black ;"
+						onInput="document.getElementById('rangeVal_thalach').innerHTML = this.value">
+						</br>
+						<label for="input_exang">fbs </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_exang">1 = Ya, 0 = Tidak<!-- Default value --></span><br>
+						<select name="exang" id="range_exang" onInput="document.getElementById('rangeVal_exang').innerHTML = this.value" 
+						style= "width: 300px; color: rgb(3, 3, 3); height: 30px">
+							<option value= "0" >Tidak</option>
+							<option value= "1" >Ya</option>
+						</select>
+						</br>
+						<label for="input_oldpeak">Oldpeak </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_oldpeak">0.1-6.2<!-- Default value --></span><br>
+						<input type="number" min="0.1" max="6.2" step="0.1" value="0.1" class="slider" id="range_oldpeak" 
+						style="width: 300px; height: 30px; background-color: #ffffff; color: black ;"
+						onInput="document.getElementById('rangeVal_oldpeak').innerHTML = this.value">
+						</br>
+						<label for="input_slope">slope </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_slope">0/1/2<!-- Default value --></span><br>
+						<input type="radio" id="range_slope" name="slope" value="0" onInput="document.getElementById('rangeVal_slope').innerHTML = this.value">>
+  						<label for="rangeVal_slope">Upsloping</label><br>
+  						<input type="radio" id="range_slope" name="slope" value="1" onInput="document.getElementById('rangeVal_slope').innerHTML = this.value">>
+  						<label for="rangeVal_slope">Flatsloping</label><br>
+						<input type="radio" id="range_slope" name="slope" value="2" onInput="document.getElementById('rangeVal_slope').innerHTML = this.value">>
+  						<label for="rangeVal_slope">Downslopins</label>
+						</br>
+						<label for="input_ca">ca </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_ca">0-4<!-- Default value --></span><br>
+						<input type="number" min="0" max="4" step="1" value="0" class="slider" id="range_ca" 
+						style="width: 300px; height: 30px; background-color: #ffffff; color: black ;"
+						onInput="document.getElementById('rangeVal_ca').innerHTML = this.value">
+						</br>
+						<label for="input_thal">slope </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_thal">1/2/3<!-- Default value --></span><br>
+						<input type="radio" id="range_thal" name="thal" value="1" onInput="document.getElementById('rangeVal_thal').innerHTML = this.value">>
+  						<label for="rangeVal_thal">Normal</label><br>
+  						<input type="radio" id="range_thal" name="thal" value="2" onInput="document.getElementById('rangeVal_thal').innerHTML = this.value">>
+  						<label for="rangeVal_thal">Fixed Defect</label><br>
+						<input type="radio" id="range_thal" name="thal" value="3" onInput="document.getElementById('rangeVal_thal').innerHTML = this.value">>
+  						<label for="rangeVal_thal">Reversable Defect</label>
+						</br><br><br>
+					
+						<!-- Tombol Prediksi -->
+						<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg" style="background-color:#d46961">Prediksi</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<div class="form-group" align="center">
+				<h3></textarea>Hasil Prediksi</textarea></h3>
+			</div>
+				<!-- Bagian Halaman untuk Hasil Prediksi -->
+				<div id="hasil_prediksi" align="center">
+					
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="anggotaKelompok" class="container-fluid text-center">
+		<br>
+		<h2>ANGGOTA KELOMPOK</h2>
+		<h4>Tim Deployment, Tim DS, dan Tim NLP</h4>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+				<img src={{ url_for('static', filename='/images/Nisa.PNG') }} class="logo-small"  width="100" >
+				<h4>NISA NABILATUZZAHRA</h4>
+				<p>Universitas Singaperbangsa Karawang </p>
+			</div>
+			<div class="col-sm-4">
+				<img src={{ url_for('static', filename='/images/Nabiilah.PNG') }} class="logo-small"  width="100" >
+				<h4>NABIILAH PUTRI H.</h4>
+				<p>Universitas Darma Persada</p>
+			</div>
+			<div class="col-sm-4">
+				<img src={{ url_for('static', filename='/images/Sultan.PNG') }} class="logo-small"  width="100" >
+				<h4>SULTAN NURFARHAN</h4>
+				<p>Universitas Bisnis Nusantara</p>
+			</div>
+		</div>
+	    <br>
+	    <div class="row slideanim">
+			<div class="col-sm-6">
+				<img src={{ url_for('static', filename='/images/Awang.PNG') }} class="logo-small"  width="100" >
+				<h4>AWANG IHSAN WISHAL</h4>
+				<p>Universitas Muhammadiyah Jakarta</p>
+			</div>
+			<div class="col-sm-6">
+				<img src={{ url_for('static', filename='/images/Farhan.PNG') }} class="logo-small"  width="100" >
+				<h4>FARHAN ROZY</h4>
+				<p>Universitas Muhammadiyah Jakarta</p>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="container-fluid text-center">
+		<a href="#halamanku" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Heart Disease Detector <br> <a href="https://orbitfutureacademy.id/">My Academy</a></p>
+	</footer>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
