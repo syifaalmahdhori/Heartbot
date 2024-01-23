@@ -1,0 +1,274 @@
+{
+    "intents":[
+        {
+            "tag":"greeting",
+            "patterns":["hai", "halo", "hallo", "hi", "haiii", "hey", "uy", "woy"],
+            "responses":["Halo, Heartbot di sini, ada yang ingin ditanyakan?", "Halo juga! Mau tau tentang informasi seputar penyakit jantung?", "Haii ini Heartbot! Ada yang bisa dibantu?", "Hai juga"],
+            "context":[""]
+        },
+        {
+            "tag":"greeting2",
+            "patterns":["Selamat pagi", "pagi", "halo, selamat siang", "siang", "hai, selamat sore", "sore", "hai selamat pagi"],
+            "responses":["Halo! selamat pagi, Heartbot di sini, ada yang ingin ditanyakan?", "Halo juga! Mau tau tentang informasi seputar penyakit jantung?", "Haii ini Heartbot! Ada yang bisa dibantu?", "Hai juga"],
+            "context":[""]
+        },
+        {
+            "tag":"penggunaan_web",
+            "patterns":["Bagaimana cara menggunakan website ini?", "Bagaimana cara menggunakan aplikasi ini?", "Cara menggunakan aplikasi ini."],
+            "responses":["Untuk menggunakan aplikasi ini kamu harus mengetahui gejala awal yang sudah pernah dirasakan sebelumnya, kemudian kamu bisa melakukan diagnosa lanjutan seperti mengukur tingkat tekanan darah, tingkat kadar kolesterol, dan tingkat kadar glukosa/gula. Setelah mengetahui diagnosis awal dan lanjutan, kamu bisa menginput/memasukkan data tersebut sesuai dengan kolom yang sudah disediakan, klik mulai dan tunggu hasil prediksi apakah kamu memiliki penyakit jantung atau tidak."],
+            "context":[""]
+        },
+        {
+            "tag":"q1",
+            "patterns":["Apa kabar?", "Gimana kabarmu?", "Gimana harimu?", "Kamu bagaimana kabarnya?"],
+            "responses":["Saya baik, kalau kamu?", "Sangat baik", "Baik dong", "Tentu sangat baik", "Ok, semoga kamu baik juga ya"],
+            "context":[""]
+        },
+        {
+            "tag":"q2",
+            "patterns":["Bagaimana cara agar terhindar dari penyakit jantung?", "cara agar terhindar dari penyakit jantung", "tips agar terhindar dari penyakit jantung"],
+            "responses":["cara agar terhindar dari penyakit jantung ialah, Menerapkan pola makan yang sehat dengan menghinfari makanan yang mengandung lemak atau kolesterol tinggi, Berhenti merokok, Hindari stress, Tidur yang cukup dan berkualitas, Kontrol tekanan darah, Pertahankan berat badan ideal, Olahraga secara teratur, Konsumsi antioksidan/obat yang dianjurkan, Rutin medical check up"],
+            "context":[""]
+        },
+        {
+            "tag":"q3",
+            "patterns":["Apa ciri-ciri penyakit jantung?", "Ciri penyakit jantung"],
+            "responses":["ciri-ciri penyakit jantung antara lain: nyeri dada, gangguan pencernaan, nyeri pada lengan, pusing dan pening, sakit area leher, tenggorokan, dan rahang, mudah lelah, mendengkur, berkeringat, batuk berkepanjangan, pergelangan kaki bengkak, dan detak jantung tidak teratur"],
+            "context":[""]
+        },
+        {
+            "tag":"q4",
+            "patterns":["Apa saja macam-macam penyakit jantung?", "Sebutkan macam-macam penyakit jantung"],
+            "responses":["Ada beberapa macam penyakit jantung, antara lain: 1). Serangan jantung, 2). penyakit jantung koroner, 3) Aritmia atau gangguan irama jantung, 4) Fibrilasi atrium, 5) Gagal Jantung, 6) Perikarditis, 7) Penyakit katup jantung, 8) Kardiomiopati"],
+            "context":[""]
+        },
+        {
+            "tag":"q5",
+            "patterns":["Apa itu penyakit jantung?", "Apa yang dimaksud penyakit jantung?", "Pengertian penyakit jantung"],
+            "responses":["Penyakit jantung adalah kondisi ketika jantung mengalami gangguan", "Maksud dari penyakit jantung adalah suatu keadaan dimana jantung tidak dapat melaksanakan fungsinya dengan baik, sehingga kerja jantung sebagai pemompa darah dan oksigen ke seluruh tubuh terganggu", "Penyakit jantung merupakan penyakit yang terjadi karena kerusakan sel otot-otot jantung dalam memompa aliran darah keseluruh tubuh, yang disebabkan kekurangan oksigen yang dibawa darah ke pembuluh darah di jantung atau juga karena terjadi kejang pada otot jantung yang menyebabkan kegagalan organ jantung dalam memompa darah, sehingga menyebabkan kondisi jantung tidak dapat melaksanakan fungsinya dengan baik"],
+            "context":[""]
+        },
+        {
+            "tag":"q6",
+            "patterns":["Apakah tangan yang sering berkeringat termasuk tanda penyakit jantung?"],
+            "responses":["Kondisi tangan yang sering berkeringat tidak ada kaitannya sama sekali dengan penyakit, karena ini disebabkan oleh produksi keringat berlebih dari kelenjar keringat kita atau biasa disebut Hiperhidrosis."],
+            "context":[""]
+        },
+        {
+            "tag":"q7",
+            "patterns":["Olahraga apa yang cocok untuk penderita penyakit jantung?"],
+            "responses":["Ada beberapa olahraga yang cocok untuk penderita penyakit jantung yaitu/n Senam jantung, Olahraga jenis ini berfokus pada tiap gerakan untuk menjaga dan meningkatkan performa jantung, juga bermanfaat menormalkan denyut nadi dan memperlancar aliran darah di tubuh/n, Berenang, bermanfaat untuk menunjang kebugaran jantung dan pembuluh darah. Selain itu, berenang juga melatih dan memperkuat otot jantung sehingga kinerja jantung untuk memompa darah bisa lebih optimal/n, Lari pagi, olahraga ini sangat membantu untuk merangsang aliran darah di tubuh sehingga sirkulasi darah jadi lebih lancar. Jika aliran darah lancar, maka kinerja jantung tidak akan terbebani dan ritme jantung akan tetap normal/n, Bersepeda, berolahraga sepeda selama 30-60 menit sehari Anda bisa mengurangi risiko terkena serangan jantung akibat stress dan memperkuat kinerja otot jantung. Pada saat mengayuh sepeda, seluruh otot tubuh turut bekerja, termasuk otot jantung/n, Yoga, saat melakukan yoga, ada tiga macam teknik yakni peregangan, pernapasan dan relaksasi. Ketiga teknik tersebut sangat baik untuk menjaga kesehatan jantung. ."],
+            "context":[""]
+        },
+        {
+            "tag":"q8",
+            "patterns":["Apakah sakit dada di sebelah kiri terus menerus seperti ditusuk-tusuk termasuk gejala penyakit jantung?"],
+            "responses":["Tidak semua sakit dibagian dada sebelah kiri merupakan penyakit jantung, tetapi bisa disebabkan karena berbagai macam hal seperti: cedera otot, penyakit asam lambung, atau gangguan kecemasan. Hal ini bisa diatasi dengan mandi dengan menggunakan air hangat, hindari menggunakan pakaian ketat, oleskan minyak hangat, hindari mengangkat beban yang berat, dan konsumsi obat anti nyeri seperti paracetamol. Jika tidak kunjung membaik harap segera menghubungi dokter untuk tindak lanjut."],
+            "context":[""]
+        },
+        {
+            "tag":"q9",
+            "patterns":["Apakah sakit dada di sebelah kiri terus menerus seperti ditusuk-tusuk termasuk gejala penyakit jantung?"],
+            "responses":["Tidak semua sakit dibagian dada sebelah kiri merupakan penyakit jantung, tetapi bisa disebabkan karena berbagai macam hal seperti: cedera otot, penyakit asam lambung, atau gangguan kecemasan. Hal ini bisa diatasi dengan mandi dengan menggunakan air hangat, hindari menggunakan pakaian ketat, oleskan minyak hangat, hindari mengangkat beban yang berat, dan konsumsi obat anti nyeri seperti paracetamol. Jika tidak kunjung membaik harap segera menghubungi dokter untuk tindak lanjut."],
+            "context":[""]
+        },
+        {
+            "tag":"q10",
+            "patterns":["Apa saja gejala penyakit jantung yang perlu di waspadai?"],
+            "responses":["Ada beberaap gejala penyakit jantung yang perlu diwaspadai yaitu: (1) jantung berdebar seperti diremas-remas, (2) rasa ingin mual dan muntah, (3) sesak napas yang disertai keringat dingin, rasa lemas dan jantung berdebar, (4) nyeri dada di sebelah kiri, (5) berkeringat dingin dan perasaan mudah lelah, (6) pusing atau sakit kepala. Jika anda mengalami gejala tersebut harap segera melakukan pemeriksaan ke dokter agar dapat ditangani lebih lanjut."],
+            "context":[""]
+        },
+        {
+            "tag":"q11",
+            "patterns":["Apa saja faktor risiko penyakit jantung?"],
+            "responses":["Faktor risiko penyakit jantung meliputi merokok, tekanan darah tinggi, kolesterol tinggi, diabetes, obesitas, dan riwayat keluarga."],
+            "context":[""]
+        },
+        {
+            "tag":"q12",
+            "patterns":["Bagaimana cara mendiagnosis penyakit jantung?"],
+            "responses":["Cara mendiagnosis penyakit jantung meliputi pemeriksaan fisik, tes darah, tes pencitraan seperti EKG dan CT Scan, dan tes stress."],
+            "context":[""]
+        },
+        {
+            "tag":"q13",
+            "patterns":["Apa itu serangan jantung?"],
+            "responses":["Serangan jantung terjadi ketika aliran darah ke jantung terhenti atau berkurang secara signifikan, sehingga menyebabkan kerusakan pada otot jantung."],
+            "context":[""]
+        },
+        {
+            "tag":"q14",
+            "patterns":["Apa itu angina?"],
+            "responses":["Angina adalah rasa sakit atau ketidaknyamanan di dada yang disebabkan oleh kurangnya pasokan oksigen ke jantung."],
+            "context":[""]
+        },
+        {
+            "tag":"q15",
+            "patterns":["Apa itu aritmia"],
+            "responses":["Aritmia adalah ketidaknormalan irama jantung yang dapat menyebabkan detak jantung yang terlalu cepat, terlalu lambat, atau tidak teratur."],
+            "context":[""]
+        },
+        {
+            "tag":"q16",
+            "patterns":["Apa itu gagal jantung?"],
+            "responses":["Gagal jantung terjadi ketika jantung tidak dapat memompa darah dengan efektif ke seluruh tubuh."],
+            "context":[""]
+        },
+        {
+            "tag":"q17",
+            "patterns":["Bagaimana cara mencegah penyakit jantung?"],
+            "responses":["Cara mencegah penyakit jantung meliputi menjaga berat badan yang sehat, berhenti merokok, olahraga secara teratur, mengonsumsi makanan yang sehat, dan mengelola stress"],
+            "context":[""]
+        },
+        {
+            "tag":"q18",
+            "patterns":["Bagaimana cara mengobati penyakit jantung?"],
+            "responses":["Cara mengobati penyakit jantung meliputi perubahan gaya hidup seperti diet dan olahraga, atau mengkonsumsi obat-obatan seperti antikoagulan dan beta blocker, atau bisa juga melalui prosedur medis seperti angioplasti dan bypass arteri koroner, dan perawatan lanjutan seperti transplantasi jantung."],
+            "context":[""]
+        },
+        {
+            "tag":"q19",
+            "patterns":["Berapa tekanan atau tensi darah yang baik agar tidak terkena penyakit jantung?"],
+            "responses":["Tekanan atau tensi darah normal pada orang dewasa yaitu sekitar 90 - 120 mmHg untuk tekanan darah sistolik, dan 60 - 80 mmHg untuk tekanan darah diastolik"],
+            "context":[""]
+        },
+        {
+            "tag":"q20",
+            "patterns":["Apa itu tekanan darah sistolik?"],
+            "responses":["Tekanan darah sistolik adalah tekanan darah pada saat jantung memompa darah atau saat jantung berkontraksi."],
+            "context":[""]
+        },
+        {
+            "tag":"q21",
+            "patterns":["Apa itu tekanan darah diastolik?"],
+            "responses":["Tekanan darah diastolik adalah tekanan darah pada saat jantung melakukan relaksasi."],
+            "context":[""]
+        },
+        {
+            "tag":"q22",
+            "patterns":["Dimana letak jantung?"],
+            "responses":["Secara anatomis, organ jantung terletak di bagian rongga tengah dada, tepatnya di sisi kiri tubuh. Organ ini juga berperan dalam memompa produk limbah serta karbon dioksida ke paru-paru untuk ditukar dengan oksigen. Inilah mengapa jantung termasuk dalam organ vital tubuh."],
+            "context":[""]
+        },
+        {
+            "tag":"q23",
+            "patterns":["Apa itu Aterosklerosis?"],
+            "responses":["Aterosklerosis adalah penyakit yang ditandai dengan adanya penumpukan lemak, kolesterol, dan zat lainnya pada dinding pembuluh arteri. Penumpukan zat tersebut akan menyebabkan plak pada dinding pembuluh darah yang akhirnya menyumbat aliran darah."],
+            "context":[""]
+        },
+        {
+            "tag":"q24",
+            "patterns":["Apa itu Arteriosklerosis?"],
+            "responses":["Arteriosklerosis adalah penyakit yang terbentuk akibat adanya kegagalan pembuluh darah dalam mengalirkan darah dan oksigen ke organ tubuh. Kondisi tersebut terjadi karena elastisitas arteri yang rusak."],
+            "context":[""]
+        },
+        {
+            "tag":"q25",
+            "patterns":["Bagaimana Arteriosklerosis dan Aterosklerosis berkaitan dengan penyakit jantung?"],
+            "responses":["Karena penyakit yang ditandai dengan adanya penumpukan lemak, kolesterol, dan zat lainnya pada dinding pembuluh arteri. Penumpukan zat tersebut akan menyebabkan plak pada dinding pembuluh darah yang akhirnya menyumbat aliran darah."],
+            "context":[""]
+        },
+        {
+            "tag":"q26",
+            "patterns":["Apakah faktor genetik dapat menyebabkan penyakit jantung?"],
+            "responses":["faktor genetik juga berperan dalam terjadinya tekanan darah tinggi, penyakit jantung, dan kondisi terkait lainnya. Namun, kemungkinan juga orang dengan riwayat keluarga penyakit jantung berbagi lingkungan yang sama dan faktor lain yang dapat meningkatkan risiko mereka"],
+            "context":[""]
+        },
+        {
+            "tag":"q27",
+            "patterns":["Apa peran stres dalam pengembangan penyakit jantung?"],
+            "responses":["Tingginya tekanan darah juga muncul akibat hormon-hormon yang dikeluarkan saat stres, dan berujung meningkatkan risiko penyakit jantung. Saat tekanan darah tinggi, maka aliran darah menjadi tidak lancar kemudian menimbulkan gangguan pada kerja organ jantung."],
+            "context":[""]
+        },
+        {
+            "tag":"q28",
+            "patterns":["Apakah merokok dapat menyebabkan penyakit jantung?"],
+            "responses":["Rokok bisa menjadi penyebab sakit jantung terutama karena berbagai zat beracun yang terkandung di dalamnya. Ketika mengisap rokok, asapnya masuk ke dalam tubuh. Asap ini yang membawa zat-zat berbahaya tersebut. Contohnya, dengan merokok, ada karbon monoksida yang masuk ke darah."],
+            "context":[""]
+        },
+        {
+            "tag":"q29",
+            "patterns":["Apakah diabetes dapat memicu penyakit jantung?"],
+            "responses":["Bila terjadi dalam jangka panjang, kadar gula dalam darah yang tinggi dapat menyebabkan kerusakan pada lapisan pembuluh darah bagian dalam dan berakibat pada menurunnya suplai darah ke otot jantung dan otak. Seiring waktu, kondisi ini dapat mengakibatkan seseorang rentan terkena serangan jantung"],
+            "context":[""]
+        },
+        {
+            "tag":"q30",
+            "patterns":["Apakah kurang tidur bisa menyebabkan penyakit jantung?"],
+            "responses":["Jangka waktu tidur kurang dari enam jam setiap malam meningkatkan risiko sebesar dua kali lipat bagi kelompok pasien yang memiliki faktor risiko untuk mengidap penyakit jantung dan diabetes."],
+            "context":[""]
+        },
+        {
+            "tag":"q31",
+            "patterns":["Mengapa penyakit jantung bisa terjadi?", "Apa yang menyebabkan penyakit jantung?", "Penyebab penyakit jantung?"],
+            "responses":["Penyakit jantung bisa terjadi karena disebabkan oleh adanya penyumbatan pada pembuluh darah arteri oleh tumpukan plak maupun zat-zat kimia dari makanan dan minuman. Hal tersebut membuat adanya penggumpalan darah pada bagian arteri sehingga aliran darah terganggu."],
+            "context":[""]
+        },
+        {
+            "tag":"q32",
+            "patterns":["Apakah faktor usia dapat menyebabkan penyakit jantung?", "Apakah faktor usia bisa menyebabkan penyakit jantung?"],
+            "responses":["Tentu, faktor usia bisa menyebabkan penyakit jantung. Biasanya orang dewasa di usia muda cenderung kurang tidur, melakukan rutinitas kerja berlebihan, banyak mengonsumsi makanan tidak sehat, dan mengurangi aktivitas fisik. Hal tersebut mengakibatkan meningkatnya kadar kolesterol jahat yang terdapat pada tubuh khususnya di jantung yang akan menyebabkan serangan jantung. Gejala yang dialami juga berbeda dengan gejala yang dialami oleh orang yang berusia lanjut karena gelaja nyeri dada tidak dirasakan dan datang secara tiba-tiba."],
+            "context":[""]
+        },
+        {
+            "tag":"q33",
+            "patterns":["Apakah faktor usia dapat menyebabkan penyakit jantung?", "Apakah faktor usia bisa menyebabkan penyakit jantung?"],
+            "responses":["Tentu, faktor usia bisa menyebabkan penyakit jantung. Biasanya orang dewasa di usia muda cenderung kurang tidur, melakukan rutinitas kerja berlebihan, banyak mengonsumsi makanan tidak sehat, dan mengurangi aktivitas fisik. Hal tersebut mengakibatkan meningkatnya kadar kolesterol jahat yang terdapat pada tubuh khususnya di jantung yang akan menyebabkan serangan jantung. Gejala yang dialami juga berbeda dengan gejala yang dialami oleh orang yang berusia lanjut karena gelaja nyeri dada tidak dirasakan dan datang secara tiba-tiba."],
+            "context":[""]
+        },
+        {
+            "tag":"q34",
+            "patterns":["Apa itu typical angina?", "Typical angina", "Maksud typical angina"],
+            "responses":["Typical angina ialah jenis nyeri dada yang paling umum. Biasanya gejalanya dapat diprediksi dan bisa terjadi karena lelah fisik, misalnya ketika menaiki tangga dada akan terasa nyeri. Jika terjadi hal seperti ini, bisa diredakan dengan istirahat yang cukup atau minum obat-obatan."],
+            "context":[""]
+        },
+        {
+            "tag":"q35",
+            "patterns":["Apa itu atypical angina?", "Atypical angina", "Maksud atypical angina"],
+            "responses":["Atypical angina ialah jenis nyeri dada yang lebih serius dan kurang umum.Gejala yang muncul biasanya kurang dapat diprediksi, dan nyeri yang dihasilkan akan berlangsung lebih lama."],
+            "context":[""]
+        },
+        {
+            "tag":"q36",
+            "patterns":["Apa itu non-angina pain?", "non-angina pain", "Maksud non-angina pain"],
+            "responses":["Non-angina pain ialah nyeri dada namun bukan dikarenakan penyakit jantung, namun karena masalah otot di bagian sekitar dada."],
+            "context":[""]
+        },
+        {
+            "tag":"q37",
+            "patterns":["Apa itu asymptomatic?", "asymptomatic", "Maksud asymptomatic"],
+            "responses":["Asymptomatic ialah tidak adanya nyeri pada dada."],
+            "context":[""]
+        },
+        {
+            "tag":"q38",
+            "patterns":["Apa itu chol pada website?", "apa itu chol pada aplikasi", "Maksud dari chol"],
+            "responses":["Kolom chol yang terdapat pada website yaitu kadar tingkat kolesterol yang diukur dalam satuan mg/dl. Jika kamu memiliki range <130 maka kamu memiliki tingkat kolesterol yang rendah, jika kamu memiliki range 130-160 maka kamu memiliki tingkat kolesterol yang sedang, dan jika kamu memiliki range >160 maka kamu memiliki tingkat kolesteror yang tinggi."],
+            "context":[""]
+        },
+        {
+            "tag":"q39",
+            "patterns":["Apa itu fbs pada website?", "apa itu fbs pada aplikasi?", "Maksud dari fbs", "Fasting blood sugar"],
+            "responses":["Fbs adalah tingkat kadar gula atau glukosa dalam darah. Satuan yang digunakan ialah mg/dl. Jika kamu sudah melakukan pemeriksaan dan mendapatkan hasil kadar gula >120  maka kamu bisa memilih angka 1, dan sebaliknya jika kamu mendapatkan hasil kadar gula <120 maka kamu bisa memilih angka 0 "],
+            "context":[""]
+        },
+        {
+            "tag":"q40",
+            "patterns":["Bagaimana cara mengecek tingkat kolesterol?", "Bagaimana cara mengecek tingkat kadar gula?", "Bagaimana cara mengecek tingkat kolesterol dan kadar gula?"],
+            "responses":["Kamu bisa melakukan cek tingkat kolesterol atau kadar gula di rumah sakit agar mendapatkan penanganan yang sesuai."],
+            "context":[""]
+        },
+        {
+            "tag":"thankyou",
+            "patterns":["Terima kasih atas penjelasannya.", "Terima kasih", "Makasih", "Thank you", "Tengkyu", "Makasih ya", "Makasih informasinya"],
+            "responses":["Baik, terima kasih kembali. Jika ada yang ingin ditanyakan kembali seputar penyakit jantung silakan menghubungi saya."],
+            "context":[""]
+        },
+        {
+            "tag":"goodbye",
+            "patterns":["Sampai jumpa", "Dadahh", "Bye", "Dahh", "Dah", "Good bye", "Byee", "see you", "Selamat tinggal"],
+            "responses":["Sampai jumpa👋", "Bye!", "Sampai jumpa kembali!", "See you", "Dadahh, sampai bertemu kembali"],
+            "context":[""]
+        }
+    ]
+}
